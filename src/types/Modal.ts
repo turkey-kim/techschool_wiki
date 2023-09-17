@@ -30,10 +30,14 @@ export interface TimerModalProps extends ModalProps {
   timerArray: Array<number | string>;
   onBreak: boolean;
   setOnBreak: React.Dispatch<React.SetStateAction<boolean>>;
-  playTime: string | null;
-  setPlayTime: React.Dispatch<React.SetStateAction<string | null>>;
-  stopTime: string | null;
-  setStopTime: React.Dispatch<React.SetStateAction<string | null>>;
+  playTime: string | null; // 이 부분을 수정합니다.
+  setPlayTime: React.Dispatch<React.SetStateAction<string | null>>; // 이 부분은 그대로 둡니다.
+
+  stopTime: string | null; // 이 부분을 수정합니다.
+  setStopTime: React.Dispatch<React.SetStateAction<string | null>>; // 이 부분은 그대로 둡니다.
+
+  // startTime: number | null;
+  // setStartTime: React.Dispatch<React.SetStateAction<number | null>>;
 }
 
 export interface ControlsProps {

@@ -9,6 +9,7 @@ import useTimer from "../../hooks/useTimer";
 
 function Header() {
   const {isOpen, toggle} = useModal();
+  // const {isOpen, toggle: originalToggle} = useModal();
   const {
     timeInSeconds,
     setTimeInSeconds,
@@ -21,6 +22,8 @@ function Header() {
     setPlayTime,
     stopTime,
     setStopTime,
+    // startTime,
+    // setStartTime
   } = useTimer();
 
   return (
@@ -72,6 +75,8 @@ function Header() {
           setPlayTime={setPlayTime}
           stopTime={stopTime}
           setStopTime={setStopTime}
+          // startTime={startTime}
+          // setStartTime={setStartTime}
         />
       </Modal>
     </div>

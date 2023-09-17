@@ -11,11 +11,15 @@ export default function useTimer(initialTime: number = 0) {
 
   useEffect(() => {
     if (isRunning) {
+      console.log("Timer start");
       const interval = setInterval(() => {
         setTimeInSeconds((prev: number) => prev + 1);
       }, 1000);
 
-      return () => clearInterval(interval);
+      return () => {
+        console.log("Timer stop!");
+        clearInterval(interval);
+      };
     }
     return undefined;
   }, [isRunning]);
