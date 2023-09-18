@@ -21,6 +21,7 @@ function TimerModal(props: TimerModalProps) {
   const [username, setUsername] = useState<string>("");
   const [playTime, setPlayTime] = useState<string | null>(null);
   const [stopTime, setStopTime] = useState<string | null>(null);
+  const [startTime, setStartTime] = useState<number | null>(null);
 
   const handleCloseModal = () => {
     onClose();
@@ -29,9 +30,8 @@ function TimerModal(props: TimerModalProps) {
   const handleSubmitStudyTime = () => {
     if (!username) {
       alert("이름을 입력하세요.");
-      return;
     }
-    console.log("이름:", username, ", 공부시간:", studyDuration);
+    // console.log("이름:", username, ", 공부시간:", studyDuration);
   };
 
   if (hidden) {
@@ -72,6 +72,8 @@ function TimerModal(props: TimerModalProps) {
             setBreakStartTime={setBreakStartTime}
             setPlayTime={setPlayTime}
             setStopTime={setStopTime}
+            startTime={startTime}
+            setStartTime={setStartTime}
           />
           {playTime && <p className="PlayTime">{playTime}</p>}
           {stopTime && <p className="StopTime">{stopTime}</p>}

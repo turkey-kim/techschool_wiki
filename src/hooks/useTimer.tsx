@@ -8,6 +8,7 @@ export default function useTimer(initialTime: number = 0) {
   const [timerArray, setTimerArray] = useState<Array<number | string>>([]);
   const [playTime, setPlayTime] = useState<string | null>(null);
   const [stopTime, setStopTime] = useState<string | null>(null);
+  const [startTime, setStartTime] = useState<number | null>(null);
 
   useEffect(() => {
     if (isRunning) {
@@ -41,5 +42,7 @@ export default function useTimer(initialTime: number = 0) {
     setPlayTime,
     stopTime,
     setStopTime,
+    startTime,
+    setStartTime,
   };
 }
