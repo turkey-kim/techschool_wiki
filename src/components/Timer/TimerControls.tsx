@@ -16,6 +16,7 @@ function Controls(props: ControlsProps) {
     startTime,
     setStartTime,
     setStatusText,
+    timeInSeconds,
   } = props;
 
   const [breakStartTime, setBreakStartTime] = useState<number | null>(null);
@@ -80,6 +81,7 @@ function Controls(props: ControlsProps) {
         effectiveBreakTime,
       );
       setStudyDuration(studyDuration);
+      localStorage.setItem("time", String(timeInSeconds));
       resetTimer();
     }
     setStopTime(getCurrentTime());
