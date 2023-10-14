@@ -8,7 +8,11 @@ async function SaveContents(categories: string[]): Promise<void> {
 
   categories.forEach(category => {
     onSnapshot(doc(db, WIKI, category), wiki => {
-      sessionStorage.setItem(category, JSON.stringify(wiki.data()));
+      const wikiData = wiki.data();
+
+      if (wikiData) {
+        sessionStorage.setItem(category, JSON.stringify(wikiData.content));
+      }
 
       const isChange = wiki.metadata.hasPendingWrites;
       callSnapshot += 1;
