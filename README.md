@@ -1,10 +1,6 @@
-<div align="center">
-  <h1>야놀자 Tech School Wiki</h1>
-  <img src="https://github.com/turkey-kim/techschool_wiki/assets/101972330/174d1fa7-4522-4ff7-91cd-cadcf49330a5" />
-</div>
 
-<br>
-<br>
+# 야놀자 Tech School Wiki
+![야놀자 Tech School Wiki](https://github.com/turkey-kim/techschool_wiki/assets/101972330/174d1fa7-4522-4ff7-91cd-cadcf49330a5)
 
 <p align="center">
   <a href="https://techschool-wiki.web.app/">
