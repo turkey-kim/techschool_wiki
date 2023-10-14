@@ -96,7 +96,7 @@ function Content(): JSX.Element {
 
   return (
     <div className="WikiContentWrap">
-      {isLoading ? <Loading /> : <div className="None"> </div>}
+      {isLoading ? <Loading /> : null}
       <div className="ContentHeader">
         <h1 className="ContentTitle">{title}</h1>
         {isTeamContent ? (
