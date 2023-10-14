@@ -7,7 +7,7 @@ function WikiSidebar(): JSX.Element {
   const [isDefault, setDefault] = useState<boolean>(true);
 
   useEffect(() => {
-    id === undefined ? setDefault(true) : setDefault(false);
+    setDefault(id === undefined);
   }, [id]);
 
   return (

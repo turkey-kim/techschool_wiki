@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="Footer">
       <p className="CopyRight">
-        Copyright © 2023 Yanolja Tech School. All rights reserved.
+        © 2023 Yanolja Tech School. All rights reserved.
       </p>
     </footer>
   );

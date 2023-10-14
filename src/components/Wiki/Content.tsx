@@ -39,7 +39,7 @@ function Content(): JSX.Element {
       const contentString = sessionStorage.getItem("커리큘럼");
 
       if (contentString) {
-        setContent(JSON.parse(contentString).content);
+        setContent(JSON.parse(contentString));
       }
     } else {
       const contentString = sessionStorage.getItem(id);
@@ -54,7 +54,7 @@ function Content(): JSX.Element {
       }
 
       if (contentString) {
-        setContent(JSON.parse(contentString).content);
+        setContent(JSON.parse(contentString));
         setText(content);
       }
     }
@@ -80,7 +80,7 @@ function Content(): JSX.Element {
         const newContent = sessionStorage.getItem(title);
 
         if (newContent) {
-          setContent(JSON.parse(newContent).content);
+          setContent(JSON.parse(newContent));
           if (isEditorOpen) {
             setText(content);
             setIsEditorOpen(false);
@@ -96,7 +96,7 @@ function Content(): JSX.Element {
 
   return (
     <div className="WikiContentWrap">
-      {isLoading ? <Loading /> : <div className="None"> </div>}
+      {isLoading ? <Loading /> : null}
       <div className="ContentHeader">
         <h1 className="ContentTitle">{title}</h1>
         {isTeamContent ? (
